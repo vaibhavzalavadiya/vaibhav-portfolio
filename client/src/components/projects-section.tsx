@@ -22,7 +22,7 @@ export default function ProjectsSection() {
           </p>
         </motion.div>
         
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           {projects.map((project, index) => (
             <motion.div
               key={project.id}
@@ -33,17 +33,22 @@ export default function ProjectsSection() {
               whileHover={{ y: -8 }}
             >
               {/* Project Image */}
-              <div className="relative h-48 overflow-hidden">
-                <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-90`}></div>
+              <div className="relative h-48 sm:h-52 overflow-hidden">
+                <img 
+                  src={project.image} 
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-70 group-hover:opacity-50 transition-opacity duration-300`}></div>
                 <div className="absolute inset-0 flex items-center justify-center">
                   <motion.i
-                    className={`${project.icon} text-white text-5xl`}
+                    className={`${project.icon} text-white text-4xl drop-shadow-lg`}
                     whileHover={{ scale: 1.2, rotate: 10 }}
                     transition={{ duration: 0.3 }}
                   />
                 </div>
                 {/* Hover overlay */}
-                <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                <div className="absolute inset-0 bg-black/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
               
               {/* Project Content */}
@@ -54,8 +59,8 @@ export default function ProjectsSection() {
                   </h3>
                 </div>
                 
-                <p className="text-gray-600 mb-4 leading-relaxed text-sm line-clamp-3">
-                  {project.description}
+                <p className="text-gray-600 mb-4 leading-relaxed text-sm">
+                  {project.description.length > 120 ? project.description.substring(0, 120) + "..." : project.description}
                 </p>
                 
                 {/* Technologies */}
