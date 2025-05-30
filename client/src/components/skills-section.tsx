@@ -46,64 +46,73 @@ export default function SkillsSection() {
           </p>
         </motion.div>
 
-        {/* Skills by Category */}
-        <div className="space-y-12 md:space-y-16">
-          {Object.entries(skillsByCategory).map(([category, categorySkills], categoryIndex) => (
+        {/* Skills Grid - All Skills in One Layout */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-4 md:gap-6">
+          {skills.map((skill, index) => (
             <motion.div
-              key={category}
-              initial={{ opacity: 0, y: 40 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 40 }}
-              transition={{ duration: 0.7, delay: categoryIndex * 0.2 }}
-              className="relative"
+              key={skill.name}
+              className="group relative bg-white/90 backdrop-blur-sm rounded-2xl p-4 md:p-6 shadow-lg hover:shadow-2xl transition-all duration-500 border border-gray-200 hover:border-blue-300"
+              initial={{ opacity: 0, y: 30, scale: 0.8 }}
+              animate={isInView ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 30, scale: 0.8 }}
+              transition={{ duration: 0.6, delay: index * 0.05 }}
+              whileHover={{ y: -8, scale: 1.05 }}
             >
-              {/* Category Header */}
-              <div className="flex items-center justify-center mb-8">
-                <div className={`relative bg-gradient-to-r ${categoryColors[category as keyof typeof categoryColors]} px-6 py-3 rounded-full shadow-lg`}>
-                  <h3 className="text-lg md:text-xl font-bold text-white">
-                    {category} Level
-                  </h3>
-                  <div className="absolute inset-0 bg-white/20 rounded-full animate-pulse"></div>
+              {/* Category Badge */}
+              <div className="absolute -top-2 -right-2 z-10">
+                <span className={`px-2 py-1 text-xs font-bold rounded-full text-white ${
+                  skill.category === 'Expert' ? 'bg-emerald-500' :
+                  skill.category === 'Advanced' ? 'bg-blue-500' :
+                  'bg-amber-500'
+                }`}>
+                  {skill.category.charAt(0)}
+                </span>
+              </div>
+
+              {/* Skill Icon */}
+              <div className="flex justify-center mb-3 md:mb-4">
+                <div className={`w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br ${skill.color} rounded-xl md:rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-500`}>
+                  <i className={`${skill.icon} text-white text-lg md:text-2xl`}></i>
                 </div>
               </div>
 
-              {/* Skills Grid */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
-                {categorySkills.map((skill, index) => (
-                  <motion.div
-                    key={skill.name}
-                    className={`group relative bg-white/80 backdrop-blur-sm rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-500 border-2 ${categoryBorders[category as keyof typeof categoryBorders]} hover:border-opacity-50`}
-                    initial={{ opacity: 0, y: 30, scale: 0.95 }}
-                    animate={isInView ? { opacity: 1, y: 0, scale: 1 } : { opacity: 0, y: 30, scale: 0.95 }}
-                    transition={{ duration: 0.6, delay: (categoryIndex * 0.2) + (index * 0.1) }}
-                    whileHover={{ y: -8, scale: 1.05 }}
-                  >
-                    {/* Skill Icon */}
-                    <div className="flex justify-center mb-4">
-                      <div className={`w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br ${skill.color} rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 group-hover:rotate-6 transition-all duration-500`}>
-                        <i className={`${skill.icon} text-white text-2xl md:text-3xl`}></i>
-                      </div>
-                    </div>
-
-                    {/* Skill Name */}
-                    <div className="text-center mb-3">
-                      <h4 className="text-lg md:text-xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-300">
-                        {skill.name}
-                      </h4>
-                    </div>
-
-                    {/* Description */}
-                    <p className="text-sm md:text-base text-gray-600 text-center leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
-                      {skill.description}
-                    </p>
-
-                    {/* Hover Effect Overlay */}
-                    <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-blue-50/50 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
-                  </motion.div>
-                ))}
+              {/* Skill Name */}
+              <div className="text-center mb-2">
+                <h4 className="text-sm md:text-lg font-bold text-gray-900 group-hover:text-blue-600 transition-colors duration-300 leading-tight">
+                  {skill.name}
+                </h4>
               </div>
+
+              {/* Description - Hidden on mobile for compactness */}
+              <p className="hidden md:block text-xs md:text-sm text-gray-600 text-center leading-relaxed group-hover:text-gray-700 transition-colors duration-300">
+                {skill.description}
+              </p>
+
+              {/* Hover Effect Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-br from-blue-50/50 via-transparent to-purple-50/50 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
             </motion.div>
           ))}
         </div>
+
+        {/* Category Legend */}
+        <motion.div
+          className="mt-12 flex flex-wrap justify-center gap-4 md:gap-6"
+          initial={{ opacity: 0, y: 20 }}
+          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
+          transition={{ duration: 0.6, delay: 0.8 }}
+        >
+          <div className="flex items-center space-x-2 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-md">
+            <div className="w-3 h-3 bg-emerald-500 rounded-full"></div>
+            <span className="text-sm font-medium text-gray-700">Expert</span>
+          </div>
+          <div className="flex items-center space-x-2 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-md">
+            <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+            <span className="text-sm font-medium text-gray-700">Advanced</span>
+          </div>
+          <div className="flex items-center space-x-2 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full shadow-md">
+            <div className="w-3 h-3 bg-amber-500 rounded-full"></div>
+            <span className="text-sm font-medium text-gray-700">Intermediate</span>
+          </div>
+        </motion.div>
 
         {/* Tools & Technologies */}
         <motion.div
