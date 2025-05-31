@@ -41,19 +41,11 @@ export default function AboutSection() {
           >
             <div className="prose prose-lg">
               <p className="text-lg text-gray-700 leading-relaxed">
-                Welcome to my digital world! I'm a passionate web developer with a strong foundation in 
-                front-end technologies and a growing expertise in full-stack development. My journey includes 
-                professional training and hands-on experience at{" "}
-                <span className="relative inline-block">
-                  <span className="text-blue-600 font-semibold">Workdo</span>
-                  <span className="absolute bottom-0 left-0 w-full h-0.5 bg-gradient-to-r from-blue-400 to-purple-400"></span>
-                </span>, 
-                where I contributed to live projects and refined my technical skills.
+                Welcome to my digital world! I'm a passionate web developer with a strong foundation in front-end technologies and a growing expertise in full-stack development. My journey includes professional training and hands-on experience working on live projects, where I refined my technical skills and built real-world solutions.
               </p>
-              
               <p className="text-lg text-gray-700 leading-relaxed">
-                I specialize in creating clean, responsive, and user-focused web applications that not only look 
-                beautiful but also deliver exceptional user experiences. My approach combines technical expertise 
+                I specialize in creating clean, responsive, and user-focused web applications that not only look
+                beautiful but also deliver exceptional user experiences. My approach combines technical expertise
                 with creative problem-solving to bring ideas to life.
               </p>
             </div>
@@ -131,7 +123,7 @@ export default function AboutSection() {
                 <div className="w-full h-full bg-gradient-to-br from-blue-400 via-purple-500 to-pink-500 rounded-full p-2 shadow-2xl">
                   <div className="w-full h-full bg-white rounded-full flex items-center justify-center relative overflow-hidden">
                     <i className="fas fa-user text-6xl md:text-8xl text-gray-400"></i>
-                    
+
                     {/* Decorative rings */}
                     <div className="absolute inset-4 border-2 border-blue-200 rounded-full"></div>
                     <div className="absolute inset-8 border-2 border-purple-200 rounded-full"></div>
@@ -150,13 +142,13 @@ export default function AboutSection() {
                 <motion.div
                   key={index}
                   className={`absolute ${item.position} w-12 h-12 md:w-16 md:h-16 ${item.color} rounded-full flex items-center justify-center shadow-lg text-white`}
-                  animate={{ 
+                  animate={{
                     y: [0, -10, 0],
                     rotate: [0, 5, 0]
                   }}
-                  transition={{ 
-                    duration: 3, 
-                    repeat: Infinity, 
+                  transition={{
+                    duration: 3,
+                    repeat: Infinity,
                     delay: item.delay,
                     ease: "easeInOut"
                   }}
@@ -184,7 +176,7 @@ export default function AboutSection() {
               The qualities that drive my success and make me a valuable team member
             </p>
           </div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
             {strengths.map((strength, index) => (
               <motion.div

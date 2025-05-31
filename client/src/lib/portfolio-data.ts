@@ -1,19 +1,19 @@
 export const personalInfo = {
   name: "Vaibhav Zalavadiya",
   title: "Front-End Developer | Quick Learner | Problem Solver",
-  description: "Passionate web developer with a strong foundation in front-end technologies like React, JavaScript, Bootstrap, and Tailwind CSS. I've completed a professional front-end development course and gained real-world experience at Workdo, where I contributed to live projects and sharpened my development skills.",
-  experience: "2+",
+  description: "Creative and results-driven web developer with a strong command of front-end technologies including React, JavaScript, Bootstrap, and Tailwind CSS. I build responsive, high-performance user interfaces for modern web applications, focused on clean design and seamless user experiences. Passionate about turning ideas into polished digital products through real-world project experience.",
+  experience: "1+",
   projects: "15+",
   contact: {
-    email: "vaibhav.zalavadiya@email.com",
-    phone: "+91 98765 43210",
-    location: "India"
+    email: "vaibhavzalavadiya2@gmail.com",
+    phone: "+91 6355981951",
+    location: "Surat, Gujarat, India"
   },
   social: {
-    linkedin: "#",
-    github: "#",
-    twitter: "#",
-    instagram: "#"
+    linkedin: "https://www.linkedin.com/in/vaibhav-zalavadiya-0000000000/",
+    github: "https://github.com/vaibhavzalavadiya",
+    twitter: "https://x.com/vaibhavzalavadiya",
+    instagram: "https://www.instagram.com/vaibhavzalavadiya/"
   }
 };
 
@@ -162,7 +162,20 @@ export const projects = [
     liveDemo: "https://css2rtl-vaibhavs-projects-b8c97238.vercel.app/",
     github: "#",
     image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500&h=300&fit=crop&crop=entropy&auto=format&q=80"
+  },
+  {
+    id: 6,
+    title: "Boss Coolant – Brand Website",
+    description: "A modern and responsive business website built with React to showcase Boss Coolant’s products and industrial solutions. Designed for brand impact, the site features a sleek UI, smooth navigation, and mobile-friendly design to ensure a strong digital presence.",
+    technologies: ["React", "Tailwind CSS", "Brand Website"],
+    icon: "fas fa-industry",
+    color: "from-yellow-500 to-red-600",
+    liveDemo: "https://boss-coolant.vercel.app/",
+    github: "#",
+    image: "https://images.unsplash.com/photo-1588011930968-eadac80e6a5a?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   }
+  
+  
 ];
 
 export const strengths = [

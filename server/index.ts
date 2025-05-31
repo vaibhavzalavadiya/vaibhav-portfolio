@@ -1,4 +1,5 @@
 import express, { type Request, Response, NextFunction } from "express";
+import getPort from "get-port";
 import { registerRoutes } from "./routes";
 import { setupVite, serveStatic, log } from "./vite";
 
@@ -47,24 +48,24 @@ app.use((req, res, next) => {
     throw err;
   });
 
-  // importantly only setup vite in development and after
-  // setting up all the other routes so the catch-all route
-  // doesn't interfere with the other routes
+  // only setup Vite in development
   if (app.get("env") === "development") {
     await setupVite(app, server);
   } else {
     serveStatic(app);
   }
 
-  // ALWAYS serve the app on port 5000
-  // this serves both the API and the client.
-  // It is the only port that is not firewalled.
-  const port = 5000;
-  server.listen({
-    port,
-    host: "0.0.0.0",
-    reusePort: true,
-  }, () => {
-    log(`serving on port ${port}`);
+  // Use dynamic port selection with fallback to 4000
+  const port = await getPort({ port: Number(process.env.PORT) || 4000 });
+
+  server.listen({ port, host: "0.0.0.0" }, () => {
+    log(`✅ Server running on http://localhost:${port}`);
+  }).on("error", (err: any) => {
+    if (err.code === "EADDRINUSE") {
+      console.error(`❌ Port ${port} is already in use. Try another port or kill the running process.`);
+      process.exit(1);
+    } else {
+      throw err;
+    }
   });
 })();

@@ -10,7 +10,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section id="home" className="relative min-h-screen flex items-center overflow-hidden">
+    <section id="home" className="relative flex items-center overflow-hidden">
       {/* Modern Gradient Background */}
       <div className="absolute inset-0 bg-gradient-to-br from-indigo-900 via-purple-900 to-pink-900">
         <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/20 via-blue-500/10 to-purple-500/20"></div>
@@ -67,7 +67,7 @@ export default function HeroSection() {
         <i className="fab fa-html5 text-3xl md:text-4xl"></i>
       </motion.div>
 
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="relative max-w-7xl mx-auto p-4 md:py-8 lg:py-14">
         <div className="text-center">
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
@@ -184,9 +184,6 @@ export default function HeroSection() {
         animate={{ y: [0, 10, 0] }}
         transition={{ duration: 2, repeat: Infinity }}
       >
-        <div className="w-6 h-10 border-2 border-white/30 rounded-full flex justify-center">
-          <div className="w-1 h-3 bg-white/50 rounded-full mt-2"></div>
-        </div>
       </motion.div>
     </section>
   );
