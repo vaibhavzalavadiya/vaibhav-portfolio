@@ -119,13 +119,12 @@ export default function HeroSection() {
             </motion.h2>
             
             <motion.p
-              className="text-lg md:text-xl text-white/80 max-w-3xl mx-auto mb-8 md:mb-12 leading-relaxed px-4"
+              className="text-base md:text-xl text-white/80 max-w-3xl mx-auto mb-8 md:mb-12 leading-relaxed px-4"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1 }}
             >
-              Passionate about creating beautiful, functional web experiences with modern technologies.
-              I turn ideas into digital reality.
+              {personalInfo.description}
             </motion.p>
             
             {/* Stats */}

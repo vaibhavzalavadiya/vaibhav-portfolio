@@ -89,6 +89,14 @@ export const skills = [
     color: "from-green-500 to-emerald-600",
     category: "Intermediate",
     description: "Backend development with Django/Flask"
+  },
+  {
+    name: "Django",
+    level: 75,
+    icon: "fas fa-server",
+    color: "from-green-600 to-teal-600",
+    category: "Advanced",
+    description: "Web framework for rapid development"
   }
 ];
 
