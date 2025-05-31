@@ -117,7 +117,7 @@ export const projects = [
     color: "from-blue-600 to-indigo-700",
     liveDemo: "https://forex-trading-mocha.vercel.app/",
     github: "#",
-    image: "https://images.unsplash.com/photo-1590479773265-7464e5d48118?w=500&h=300&fit=crop&crop=entropy&auto=format&q=80"
+    image: "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=500&h=300&fit=crop&crop=entropy&auto=format&q=80"
   },
   {
     id: 2,
@@ -128,7 +128,7 @@ export const projects = [
     color: "from-emerald-500 to-teal-600",
     liveDemo: "https://apexremovecom.vercel.app/",
     github: "#",
-    image: "https://images.unsplash.com/photo-1555421689-491a97ff2040?w=500&h=300&fit=crop&crop=entropy&auto=format&q=80"
+    image: "https://images.unsplash.com/photo-1633409361618-c73427e4e206?w=500&h=300&fit=crop&crop=entropy&auto=format&q=80"
   },
   {
     id: 3,
@@ -139,7 +139,7 @@ export const projects = [
     color: "from-amber-500 to-orange-600",
     liveDemo: "https://jewelry-storesite.netlify.app/",
     github: "#",
-    image: "https://images.unsplash.com/photo-1571781926291-c477ebfd024b?w=500&h=300&fit=crop&crop=entropy&auto=format&q=80"
+    image: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=500&h=300&fit=crop&crop=entropy&auto=format&q=80"
   },
   {
     id: 4,
@@ -150,7 +150,7 @@ export const projects = [
     color: "from-violet-500 to-purple-600",
     liveDemo: "https://edusity-react-web-gamma.vercel.app/",
     github: "#",
-    image: "https://images.unsplash.com/photo-1562774053-701939374585?w=500&h=300&fit=crop&crop=entropy&auto=format&q=80"
+    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=500&h=300&fit=crop&crop=entropy&auto=format&q=80"
   },
   {
     id: 5,
@@ -161,7 +161,7 @@ export const projects = [
     color: "from-cyan-500 to-sky-600",
     liveDemo: "https://css2rtl-vaibhavs-projects-b8c97238.vercel.app/",
     github: "#",
-    image: "https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=500&h=300&fit=crop&crop=entropy&auto=format&q=80"
+    image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500&h=300&fit=crop&crop=entropy&auto=format&q=80"
   }
 ];
 

@@ -69,11 +69,7 @@ export default function Navigation() {
               transition={{ duration: 0.5 }}
               whileHover={{ scale: 1.05 }}
             >
-              <span className={`text-2xl font-bold transition-all duration-300 ${
-                scrolled 
-                  ? 'bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent' 
-                  : 'text-white'
-              }`}>
+              <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
                 VZ
               </span>
             </motion.div>
@@ -87,12 +83,8 @@ export default function Navigation() {
                     onClick={() => scrollToSection(item.href)}
                     className={`relative px-3 py-2 text-sm font-medium transition-all duration-300 rounded-lg ${
                       activeSection === item.href.substring(1)
-                        ? scrolled 
-                          ? "text-blue-600 bg-blue-50" 
-                          : "text-cyan-300 bg-white/10"
-                        : scrolled
-                          ? "text-gray-600 hover:text-blue-600 hover:bg-gray-50"
-                          : "text-white/80 hover:text-white hover:bg-white/10"
+                        ? "text-blue-600 bg-blue-50" 
+                        : "text-gray-600 hover:text-blue-600 hover:bg-gray-50"
                     }`}
                     initial={{ opacity: 0, y: -20 }}
                     animate={{ opacity: 1, y: 0 }}
@@ -119,11 +111,7 @@ export default function Navigation() {
             <div className="md:hidden">
               <motion.button
                 onClick={() => setIsOpen(!isOpen)}
-                className={`p-2 rounded-lg transition-all duration-300 ${
-                  scrolled 
-                    ? 'text-gray-600 hover:text-blue-600 hover:bg-gray-50' 
-                    : 'text-white/80 hover:text-white hover:bg-white/10'
-                }`}
+                className="p-2 rounded-lg transition-all duration-300 text-gray-600 hover:text-blue-600 hover:bg-gray-50"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
