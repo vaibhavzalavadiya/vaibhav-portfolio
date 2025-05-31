@@ -8,7 +8,7 @@ export default function AboutSection() {
   const isInView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section id="about" className="py-16 md:py-24 bg-gradient-to-br from-white via-blue-50 to-indigo-50 relative overflow-hidden" ref={ref}>
+    <section id="about" className="py-12 md:py-16 bg-gradient-to-br from-white via-blue-50 to-indigo-50 relative overflow-hidden" ref={ref}>
       {/* Background Decorations */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-20 left-10 w-64 h-64 bg-gradient-to-r from-blue-200 to-purple-200 rounded-full mix-blend-multiply filter blur-3xl opacity-40 animate-blob"></div>
@@ -18,15 +18,15 @@ export default function AboutSection() {
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-12"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6 }}
         >
-          <h2 className="text-3xl md:text-5xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-indigo-800 bg-clip-text text-transparent mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-gray-900 via-blue-800 to-indigo-800 bg-clip-text text-transparent mb-3">
             About Me
           </h2>
-          <p className="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto">
+          <p className="text-base md:text-lg text-gray-600 max-w-2xl mx-auto">
             Passionate developer crafting digital experiences with creativity and precision
           </p>
         </motion.div>
@@ -124,7 +124,7 @@ export default function AboutSection() {
             <div className="relative">
               {/* Main Profile Circle */}
               <motion.div
-                className="w-80 h-80 md:w-96 md:h-96 mx-auto relative"
+                className="w-64 h-64 md:w-72 md:h-72 mx-auto relative"
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.3 }}
               >
