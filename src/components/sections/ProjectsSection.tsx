@@ -145,7 +145,7 @@ export default function ProjectsSection() {
         
         {/* View All Projects CTA */}
         <motion.div
-          className="text-center mt-16"
+          className="text-center lg:mt-16 mt-8"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6, delay: 0.8 }}
@@ -154,12 +154,12 @@ export default function ProjectsSection() {
             href="https://github.com/vaibhavzalavadiya"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-8 py-4 rounded-lg font-semibold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 space-x-3"
+            className="inline-flex items-center bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white md:px-8 px-4 md:py-4 py-3 rounded-lg font-semibold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 space-x-3"
             whileHover={{ scale: 1.05, y: -2 }}
             whileTap={{ scale: 0.95 }}
           >
             <i className="fab fa-github text-xl"></i>
-            <span>View All Projects on GitHub</span>
+            <span className="md:text-lg text-sm">View All Projects on GitHub</span>
             <i className="fas fa-arrow-right text-sm"></i>
           </motion.a>
         </motion.div>

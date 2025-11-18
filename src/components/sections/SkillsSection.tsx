@@ -47,21 +47,21 @@ export default function SkillsSection() {
 
         {/* Tools */}
         <motion.div
-          className="bg-white rounded-lg p-8 shadow-lg border border-gray-100"
+          className="bg-white rounded-lg lg:p-8 p-4 shadow-lg border border-gray-100"
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
           transition={{ duration: 0.6, delay: 0.5 }}
         >
-          <div className="text-center mb-8">
-            <h3 className="text-3xl font-bold text-gray-900 mb-2">Development Tools</h3>
-            <p className="text-gray-600">Essential tools that power my development workflow</p>
+          <div className="text-center md:mb-8 mb-5">
+            <h3 className="md:text-3xl text-2xl font-bold text-gray-900 mb-2">Development Tools</h3>
+            <p className="text-gray-600 md:text-base text-sm">Essential tools that power my development workflow</p>
           </div>
           
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
             {tools.map((tool, index) => (
               <motion.div
                 key={tool.name}
-                className="group bg-gray-50 hover:bg-white rounded-lg p-6 text-center shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-blue-200"
+                className="group bg-gray-50 hover:bg-white rounded-lg lg:p-6 p-4 text-center shadow-sm hover:shadow-md transition-all duration-300 border border-gray-100 hover:border-blue-200"
                 initial={{ opacity: 0, y: 15 }}
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 15 }}
                 transition={{ duration: 0.4, delay: 0.7 + index * 0.1 }}

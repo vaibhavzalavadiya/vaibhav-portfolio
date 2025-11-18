@@ -30,6 +30,17 @@ export default function Navigation() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  useEffect(() => {
+    if (isOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isOpen]);
+
   const navItems = [
     { href: "#home", label: "Home", icon: "fas fa-home" },
     { href: "#about", label: "About", icon: "fas fa-user" },
@@ -41,7 +52,7 @@ export default function Navigation() {
   const socialLinks = [
     { icon: "fab fa-linkedin", href: personalInfo.social.linkedin, color: "text-blue-600 hover:text-blue-700" },
     { icon: "fab fa-github", href: personalInfo.social.github, color: "text-gray-700 hover:text-gray-900" },
-    { icon: "fab fa-twitter", href: personalInfo.social.twitter, color: "text-blue-400 hover:text-blue-500" }
+    { icon: "fa-brands fa-x", href: personalInfo.social.twitter, color: "text-blue-400 hover:text-blue-500" }
   ];
 
   const scrollToSection = (href: string) => {
@@ -58,7 +69,7 @@ export default function Navigation() {
       <nav 
         className={`sticky top-0 left-0 right-0 z-50 w-full transition-all duration-500 bg-white border-b border-gray-200 shadow-sm`}
       >
-        <div className="container px-4 mx-auto">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16 lg:h-20">
             {/* Logo */}
             <motion.div 
@@ -151,7 +162,7 @@ export default function Navigation() {
             <div className="lg:hidden">
               <motion.button
                 onClick={() => setIsOpen(!isOpen)}
-                className="relative p-2 rounded-lg transition-all duration-300 text-gray-700 hover:text-blue-600 hover:bg-blue-50"
+                className="relative p-2 rounded-lg transition-all duration-300 text-gray-700 hover:text-blue-600 hover:bg-blue-50 z-50"
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -182,28 +193,28 @@ export default function Navigation() {
             
             {/* Mobile Sidebar */}
             <motion.div
-              className="fixed top-0 right-0 h-full w-80 bg-white shadow-2xl z-50 lg:hidden overflow-hidden"
+              className="fixed top-0 right-0 h-full w-full max-w-sm bg-white shadow-2xl z-50 lg:hidden overflow-y-auto"
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
               transition={{ type: "spring", stiffness: 300, damping: 30 }}
             >
-              <div className="p-6 pt-20">
+              <div className="p-4 sm:p-6 pt-16 min-h-full">
                 {/* Close Button */}
                 <button
                   onClick={() => setIsOpen(false)}
-                  className="absolute top-6 right-6 w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition-colors"
+                  className="absolute top-4 sm:top-6 right-4 sm:right-6 w-10 h-10 bg-gray-100 hover:bg-gray-200 rounded-full flex items-center justify-center transition-colors"
                 >
                   <i className="fas fa-times text-gray-600"></i>
                 </button>
                 
                 {/* Navigation Items */}
-                <div className="space-y-3 mb-8">
+                <div className="space-y-3 mb-4">
                   {navItems.map((item, index) => (
                     <motion.button
                       key={item.href}
                       onClick={() => scrollToSection(item.href)}
-                      className={`w-full flex items-center space-x-4 px-4 py-4 rounded-lg transition-all duration-300 text-left group ${
+                      className={`w-full flex items-center space-x-3 sm:space-x-4 px-3 sm:px-4 py-3 sm:py-4 rounded-lg transition-all duration-300 text-left group ${
                         activeSection === item.href.substring(1)
                           ? "text-blue-600 bg-blue-50 font-semibold shadow-sm border border-blue-100"
                           : "text-gray-700 hover:text-blue-600 hover:bg-blue-50/50"
@@ -222,7 +233,7 @@ export default function Navigation() {
                         <i className={`${item.icon} text-sm`}></i>
                       </div>
                       <div className="flex-1">
-                        <span className="text-lg font-medium">{item.label}</span>
+                        <span className="text-base sm:text-lg font-medium">{item.label}</span>
                       </div>
                       {activeSection === item.href.substring(1) && (
                         <motion.div
@@ -238,7 +249,7 @@ export default function Navigation() {
                 
                 {/* Social Links & CTA */}
                 <motion.div
-                  className="pt-6 border-t border-gray-200"
+                  className="pt-5 border-t border-gray-200"
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.6 }}
@@ -263,7 +274,7 @@ export default function Navigation() {
                   </div>
                   <motion.button
                     onClick={() => scrollToSection("#contact")}
-                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-4 rounded-lg font-semibold text-lg shadow-lg hover:shadow-xl transition-all duration-300"
+                    className="w-full bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white py-3 sm:py-4 rounded-lg font-semibold text-base sm:text-lg shadow-lg hover:shadow-xl transition-all duration-300"
                     whileHover={{ scale: 1.02 }}
                     whileTap={{ scale: 0.98 }}
                   >

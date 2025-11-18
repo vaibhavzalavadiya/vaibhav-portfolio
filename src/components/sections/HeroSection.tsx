@@ -109,7 +109,7 @@ export default function HeroSection() {
             </motion.h1>
             
             <motion.h2
-              className="text-xl md:text-3xl lg:text-4xl text-white/90 mb-6 md:mb-8 font-medium leading-tight"
+              className="text-xl md:text-3xl lg:text-4xl text-white/90 mb-4 md:mb-8 font-medium leading-tight"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.8 }}
@@ -119,7 +119,7 @@ export default function HeroSection() {
             </motion.h2>
             
             <motion.p
-              className="text-base text-white max-w-4xl mx-auto mb-8 md:mb-12 leading-relaxed px-4"
+              className="text-sm lg:text-base text-white max-w-4xl mx-auto mb-5 md:mb-8 leading-relaxed"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1 }}
@@ -129,34 +129,34 @@ export default function HeroSection() {
             
             {/* Stats */}
             <motion.div
-              className="flex flex-wrap justify-center gap-6 md:gap-8 mb-8 md:mb-12"
+              className="flex flex-wrap justify-center gap-4 md:gap-6 mb-5 md:mb-8"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.2 }}
             >
               <div className="text-center">
                 <div className="text-2xl md:text-3xl font-bold text-cyan-400">{personalInfo.experience}</div>
-                <div className="text-sm md:text-base text-white/70">Years Experience</div>
+                <div className="text-sm md:text-base text-white/90">Years Experience</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl md:text-3xl font-bold text-purple-400">{personalInfo.projects}</div>
-                <div className="text-sm md:text-base text-white/70">Projects Completed</div>
+                <div className="text-sm md:text-base text-white/90">Projects Completed</div>
               </div>
               <div className="text-center">
                 <div className="text-2xl md:text-3xl font-bold text-pink-400">9+</div>
-                <div className="text-sm md:text-base text-white/70">Technologies</div>
+                <div className="text-sm md:text-base text-white/90">Technologies</div>
               </div>
             </motion.div>
             
             <motion.div
-              className="flex flex-col sm:flex-row gap-4 justify-center px-4"
+              className="flex flex-col sm:flex-row gap-4 justify-center"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 1.4 }}
             >
               <motion.button
                 onClick={() => scrollToSection("#projects")}
-                className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white px-8 py-4 rounded-lg font-semibold transition-all duration-300 shadow-xl hover:shadow-2xl border border-white/20"
+                className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white md:px-8 md:py-4 py-3 px-4 rounded-lg font-semibold transition-all duration-300 shadow-xl hover:shadow-2xl border border-white/20"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >
@@ -166,7 +166,7 @@ export default function HeroSection() {
               
               <motion.button
                 onClick={() => scrollToSection("#contact")}
-                className="bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white border-2 border-white/30 hover:border-white/50 px-8 py-4 rounded-lg font-semibold transition-all duration-300"
+                className="bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white border-2 border-white/30 hover:border-white/50 md:px-8 md:py-4 py-3 px-4 rounded-lg font-semibold transition-all duration-300"
                 whileHover={{ scale: 1.05, y: -2 }}
                 whileTap={{ scale: 0.95 }}
               >

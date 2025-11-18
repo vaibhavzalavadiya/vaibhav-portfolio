@@ -25,7 +25,7 @@ export default function Footer() {
       name: "GitHub"
     },
     { 
-      icon: "fab fa-twitter", 
+      icon: "fa-brands fa-x", 
       href: personalInfo.social.twitter, 
       color: "hover:bg-blue-500",
       name: "Twitter"
@@ -107,69 +107,48 @@ export default function Footer() {
 
       <div className="relative container px-4 mx-auto">
         {/* Main Footer Content */}
-        <div className="py-16 lg:py-20">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-12">
+        <div className="py-10 lg:py-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:gap-8 gap-4">
             {/* Brand & About Section */}
             <motion.div
-              className="lg:col-span-2 space-y-6"
+              className="lg:col-span-2 lg:space-y-6 space-y-4"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6 }}
               viewport={{ once: true }}
             >
               {/* Logo & Brand */}
-              <div className="flex items-center space-x-4 mb-6">
-                <div className="w-14 h-14 bg-gradient-to-br from-blue-500 via-purple-600 to-indigo-700 rounded-lg flex items-center justify-center shadow-xl">
+              <div className="flex items-center space-x-4 lg:mb-6 mb-4">
+                <div className="w-14 h-14 flex-shrink-0 bg-gradient-to-br from-blue-500 via-purple-600 to-indigo-700 rounded-lg flex items-center justify-center shadow-xl">
                   <span className="text-white font-bold text-xl">VZ</span>
                 </div>
                 <div>
-                  <h3 className="text-2xl lg:text-3xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
+                  <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
                     {personalInfo.name}
                   </h3>
-                  <p className="text-blue-200 font-medium">
+                  <p className="text-blue-200 font-medium text-sm mt-1">
                     {personalInfo.title}
                   </p>
                 </div>
               </div>
 
               {/* Description */}
-              <p className="text-gray-300 leading-relaxed text-lg max-w-lg">
+              <p className="text-gray-300 leading-relaxed lg:text-lg text-base max-w-lg">
                 Passionate about creating beautiful, functional web experiences that make a difference. 
                 Let's collaborate and build something amazing together.
               </p>
 
-              {/* Contact Information */}
-              <div className="space-y-4">
-                <h4 className="text-lg font-semibold text-white mb-3">Get in Touch</h4>
-                <div className="space-y-3">
-                  {contactInfo.map((contact, index) => (
-                    <motion.div 
-                      key={index}
-                      className="flex items-center space-x-3 group cursor-pointer"
-                      whileHover={{ x: 4 }}
-                      transition={{ duration: 0.2 }}
-                    >
-                      <div className="w-10 h-10 bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center group-hover:bg-white/20 transition-all duration-300">
-                        <i className={`${contact.icon} text-cyan-400 text-sm`}></i>
-                      </div>
-                      <span className="text-gray-300 group-hover:text-white transition-colors duration-300">
-                        {contact.value}
-                      </span>
-                    </motion.div>
-                  ))}
-                </div>
-              </div>
             </motion.div>
 
             {/* Quick Navigation */}
             <motion.div
-              className="space-y-6"
+              className="lg:space-y-6 space-y-4"
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               viewport={{ once: true }}
             >
-              <h4 className="text-xl font-bold text-white mb-6">Quick Links</h4>
+              <h4 className="text-xl font-bold text-white md:mb-5 mb-3">Quick Links</h4>
               <ul className="space-y-3">
                 {quickLinks.map((link, index) => (
                   <motion.li 
@@ -199,7 +178,7 @@ export default function Footer() {
               transition={{ duration: 0.6, delay: 0.4 }}
               viewport={{ once: true }}
             >
-              <h4 className="text-xl font-bold text-white mb-6">Services</h4>
+              <h4 className="text-xl font-bold text-white md:mb-5 mb-3">Services</h4>
               <ul className="space-y-3">
                 {services.map((service, index) => (
                   <motion.li 
@@ -232,7 +211,7 @@ export default function Footer() {
           <div className="flex flex-col lg:flex-row justify-between items-center space-y-6 lg:space-y-0">
             {/* Social Links */}
             <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-8">
-              <p className="text-gray-400 font-medium">Follow me on:</p>
+              <p className="text-white font-medium lg:text-base text-sm">Follow me on:</p>
               <div className="flex space-x-4">
                 {socialLinks.map((social, index) => (
                   <motion.a
@@ -259,10 +238,10 @@ export default function Footer() {
 
             {/* Copyright & Tech Stack */}
             <div className="text-center lg:text-right space-y-2">
-              <p className="text-gray-400 font-medium">
+              <p className="text-white font-medium lg:text-base text-sm">
                 © {currentYear} {personalInfo.name}. All rights reserved.
               </p>
-              <p className="text-sm text-gray-500 flex items-center justify-center lg:justify-end space-x-2">
+              <p className="text-sm text-white md:flex hidden items-center justify-center lg:justify-end space-x-2">
                 <span>Built with</span>
                 <i className="fab fa-react text-blue-400"></i>
                 <span>React,</span>
@@ -278,7 +257,7 @@ export default function Footer() {
         {/* Scroll to Top Button */}
         <motion.button
           onClick={() => scrollToSection("#home")}
-          className="fixed bottom-8 right-8 w-14 h-14 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 rounded-lg flex items-center justify-center text-white shadow-xl hover:shadow-2xl transition-all duration-300 z-10"
+          className="fixed md:bottom-8 bottom-5 md:right-8 right-5 md:w-14 md:h-14 w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 rounded-lg flex items-center justify-center text-white shadow-xl hover:shadow-2xl transition-all duration-300 z-10"
           whileHover={{ scale: 1.1, y: -4 }}
           whileTap={{ scale: 0.95 }}
           initial={{ opacity: 0, scale: 0.8 }}

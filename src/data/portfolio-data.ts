@@ -2,8 +2,8 @@ export const personalInfo = {
   name: "Vaibhav Zalavadiya",
   title: "Front-End Developer | Quick Learner | Problem Solver",
   description: "Creative and results-driven web developer with a strong command of front-end technologies including React, JavaScript, Bootstrap, and Tailwind CSS. I build responsive, high-performance user interfaces for modern web applications, focused on clean design and seamless user experiences. Passionate about turning ideas into polished digital products through real-world project experience.",
-  experience: "1+",
-  projects: "15+",
+  experience: "1.5+",
+  projects: "20+",
   contact: {
     email: "vaibhavzalavadiya2@gmail.com",
     phone: "+91 6355981951",
