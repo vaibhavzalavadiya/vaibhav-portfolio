@@ -92,7 +92,7 @@ export default function HeroSection() {
               transition={{ duration: 0.8, delay: 0.4 }}
             >
               <span className="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-cyan-300 text-sm md:text-base font-medium border border-white/20">
-                👋 Welcome to my portfolio
+                👋 Welcome To My Portfolio
               </span>
             </motion.div>
             
