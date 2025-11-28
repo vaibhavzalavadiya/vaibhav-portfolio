@@ -69,71 +69,38 @@ export default function HeroSection() {
 
       <div className="relative max-w-7xl mx-auto p-4 md:py-8 lg:py-14">
         <div className="text-center">
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
+          <div>
             {/* Profile Avatar */}
-            <motion.div
-              className="w-24 h-24 md:w-32 md:h-32 mx-auto mb-6 md:mb-8 rounded-full bg-gradient-to-br from-cyan-400 to-blue-500 p-1 shadow-2xl"
-              whileHover={{ scale: 1.05, rotate: 5 }}
-              transition={{ duration: 0.3 }}
-            >
+            <div className="w-24 h-24 md:w-32 md:h-32 mx-auto mb-6 md:mb-8 rounded-full bg-gradient-to-br from-cyan-400 to-blue-500 p-1 shadow-2xl">
               <div className="w-full h-full rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center">
                 <i className="fas fa-user text-2xl md:text-4xl text-gray-700"></i>
               </div>
-            </motion.div>
+            </div>
             
-            <motion.div
-              className="mb-6"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-            >
+            <div className="mb-6">
               <span className="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-cyan-300 text-sm md:text-base font-medium border border-white/20">
                 👋 Welcome To My Portfolio
               </span>
-            </motion.div>
+            </div>
             
-            <motion.h1
-              className="text-4xl sm:text-6xl lg:text-7xl font-bold text-white mb-4 md:mb-6"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.6 }}
-            >
+            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-white mb-4 md:mb-6">
               Hi, I'm{" "}
               <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
                 Vaibhav
               </span>
-            </motion.h1>
+            </h1>
             
-            <motion.h2
-              className="text-xl md:text-3xl lg:text-4xl text-white/90 mb-4 md:mb-8 font-medium leading-tight"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.8 }}
-            >
+            <h2 className="text-xl md:text-3xl lg:text-4xl text-white/90 mb-4 md:mb-8 font-medium leading-tight">
               <span className="text-cyan-300">Front-End Developer</span> &{" "}
               <span className="text-purple-300">Problem Solver</span>
-            </motion.h2>
+            </h2>
             
-            <motion.p
-              className="text-sm lg:text-base text-white max-w-4xl mx-auto mb-5 md:mb-8 leading-relaxed"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1 }}
-            >
+            <p className="text-sm lg:text-base text-white max-w-4xl mx-auto mb-5 md:mb-8 leading-relaxed">
               {personalInfo.description}
-            </motion.p>
+            </p>
             
             {/* Stats */}
-            <motion.div
-              className="flex flex-wrap justify-center gap-4 md:gap-6 mb-5 md:mb-8"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.2 }}
-            >
+            <div className="flex flex-wrap justify-center gap-4 md:gap-6 mb-5 md:mb-8">
               <div className="text-center">
                 <div className="text-2xl md:text-3xl font-bold text-cyan-400">{personalInfo.experience}</div>
                 <div className="text-sm md:text-base text-white/90">Years Experience</div>
@@ -146,35 +113,26 @@ export default function HeroSection() {
                 <div className="text-2xl md:text-3xl font-bold text-pink-400">9+</div>
                 <div className="text-sm md:text-base text-white/90">Technologies</div>
               </div>
-            </motion.div>
+            </div>
             
-            <motion.div
-              className="flex flex-col sm:flex-row gap-4 justify-center"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 1.4 }}
-            >
-              <motion.button
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button
                 onClick={() => scrollToSection("#projects")}
                 className="bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 text-white md:px-8 md:py-4 py-3 px-4 rounded-lg font-semibold transition-all duration-300 shadow-xl hover:shadow-2xl border border-white/20"
-                whileHover={{ scale: 1.05, y: -2 }}
-                whileTap={{ scale: 0.95 }}
               >
                 <i className="fas fa-rocket mr-2"></i>
                 View My Work
-              </motion.button>
+              </button>
               
-              <motion.button
+              <button
                 onClick={() => scrollToSection("#contact")}
                 className="bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white border-2 border-white/30 hover:border-white/50 md:px-8 md:py-4 py-3 px-4 rounded-lg font-semibold transition-all duration-300"
-                whileHover={{ scale: 1.05, y: -2 }}
-                whileTap={{ scale: 0.95 }}
               >
                 <i className="fas fa-envelope mr-2"></i>
                 Get In Touch
-              </motion.button>
-            </motion.div>
-          </motion.div>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
 

@@ -110,13 +110,7 @@ export default function Footer() {
         <div className="py-10 lg:py-16">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 lg:gap-8 gap-4">
             {/* Brand & About Section */}
-            <motion.div
-              className="lg:col-span-2 lg:space-y-6 space-y-4"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
+            <div className="lg:col-span-2 lg:space-y-6 space-y-4">
               {/* Logo & Brand */}
               <div className="flex items-center space-x-4 lg:mb-6 mb-4">
                 <div className="w-14 h-14 flex-shrink-0 bg-gradient-to-br from-blue-500 via-purple-600 to-indigo-700 rounded-lg flex items-center justify-center shadow-xl">
@@ -138,24 +132,14 @@ export default function Footer() {
                 Let's collaborate and build something amazing together.
               </p>
 
-            </motion.div>
+            </div>
 
             {/* Quick Navigation */}
-            <motion.div
-              className="lg:space-y-6 space-y-4"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              viewport={{ once: true }}
-            >
+            <div className="lg:space-y-6 space-y-4">
               <h4 className="text-xl font-bold text-white md:mb-5 mb-3">Quick Links</h4>
               <ul className="space-y-3">
                 {quickLinks.map((link, index) => (
-                  <motion.li 
-                    key={link.name}
-                    whileHover={{ x: 6 }}
-                    transition={{ duration: 0.2 }}
-                  >
+                  <li key={link.name}>
                     <button
                       onClick={() => scrollToSection(link.href)}
                       className="group flex items-center space-x-3 text-gray-300 hover:text-cyan-400 transition-all duration-300 w-full text-left"
@@ -165,27 +149,19 @@ export default function Footer() {
                       </div>
                       <span className="font-medium">{link.name}</span>
                     </button>
-                  </motion.li>
+                  </li>
                 ))}
               </ul>
-            </motion.div>
+            </div>
 
             {/* Services */}
-            <motion.div
-              className="space-y-6"
-              initial={{ opacity: 0, y: 30 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
-              viewport={{ once: true }}
-            >
+            <div className="space-y-6">
               <h4 className="text-xl font-bold text-white md:mb-5 mb-3">Services</h4>
               <ul className="space-y-3">
                 {services.map((service, index) => (
-                  <motion.li 
+                  <li 
                     key={service.name}
                     className="group flex items-center space-x-3 text-gray-300"
-                    whileHover={{ x: 4 }}
-                    transition={{ duration: 0.2 }}
                   >
                     <div className="w-8 h-8 bg-white/5 group-hover:bg-purple-400/20 rounded-lg flex items-center justify-center transition-all duration-300">
                       <i className={`${service.icon} text-purple-400 text-xs`}></i>
@@ -193,45 +169,33 @@ export default function Footer() {
                     <span className="font-medium group-hover:text-white transition-colors duration-300">
                       {service.name}
                     </span>
-                  </motion.li>
+                  </li>
                 ))}
               </ul>
-            </motion.div>
+            </div>
           </div>
         </div>
 
         {/* Bottom Section */}
-        <motion.div
-          className="border-t border-white/10 py-8"
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-          viewport={{ once: true }}
-        >
+        <div className="border-t border-white/10 py-8">
           <div className="flex flex-col lg:flex-row justify-between items-center space-y-6 lg:space-y-0">
             {/* Social Links */}
             <div className="flex flex-col sm:flex-row items-center space-y-4 sm:space-y-0 sm:space-x-8">
               <p className="text-white font-medium lg:text-base text-sm">Follow me on:</p>
               <div className="flex space-x-4">
                 {socialLinks.map((social, index) => (
-                  <motion.a
+                  <a
                     key={index}
                     href={social.href}
                     target="_blank"
                     rel="noopener noreferrer"
                     className={`group relative w-12 h-12 bg-white/10 backdrop-blur-sm rounded-lg flex items-center justify-center text-white transition-all duration-300 ${social.color} hover:scale-110 hover:shadow-lg`}
-                    whileHover={{ y: -3 }}
-                    whileTap={{ scale: 0.95 }}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    transition={{ duration: 0.3, delay: 0.8 + index * 0.1 }}
-                    viewport={{ once: true }}
                   >
                     <i className={`${social.icon} text-lg`}></i>
                     <div className="absolute -top-10 left-1/2 transform -translate-x-1/2 bg-gray-900 text-white text-xs px-2 py-1 rounded opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap">
                       {social.name}
                     </div>
-                  </motion.a>
+                  </a>
                 ))}
               </div>
             </div>
@@ -252,21 +216,15 @@ export default function Footer() {
               </p>
             </div>
           </div>
-        </motion.div>
+        </div>
 
         {/* Scroll to Top Button */}
-        <motion.button
+        <button
           onClick={() => scrollToSection("#home")}
           className="fixed md:bottom-8 bottom-5 md:right-8 right-5 md:w-14 md:h-14 w-10 h-10 bg-gradient-to-r from-cyan-500 to-blue-500 hover:from-cyan-600 hover:to-blue-600 rounded-lg flex items-center justify-center text-white shadow-xl hover:shadow-2xl transition-all duration-300 z-10"
-          whileHover={{ scale: 1.1, y: -4 }}
-          whileTap={{ scale: 0.95 }}
-          initial={{ opacity: 0, scale: 0.8 }}
-          whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.3, delay: 1 }}
-          viewport={{ once: true }}
         >
           <i className="fas fa-arrow-up text-lg"></i>
-        </motion.button>
+        </button>
       </div>
     </footer>
   );

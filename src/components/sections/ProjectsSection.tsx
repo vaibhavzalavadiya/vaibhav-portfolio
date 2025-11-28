@@ -31,13 +31,9 @@ export default function ProjectsSection() {
         {/* Projects Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-6 gap-5">
           {projects.map((project, index) => (
-            <motion.div
+            <div
               key={project.id}
               className="group bg-white rounded-lg shadow-lg overflow-hidden border border-gray-200 flex flex-col h-full"
-              initial={{ opacity: 0, y: 30 }}
-              animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              whileHover={{ y: -8 }}
             >
               {/* Project Image */}
               <div className="relative h-48 overflow-hidden">
@@ -48,11 +44,7 @@ export default function ProjectsSection() {
                 />
                 <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-80 group-hover:opacity-60 transition-opacity duration-300`}></div>
                 <div className="absolute inset-0 flex items-center justify-center">
-                  <motion.i
-                    className={`${project.icon} text-white text-4xl drop-shadow-lg`}
-                    whileHover={{ scale: 1.2, rotate: 10 }}
-                    transition={{ duration: 0.3 }}
-                  />
+                  <i className={`${project.icon} text-white text-4xl drop-shadow-lg`} />
                 </div>
                 
                 {/* Quick Actions Overlay */}
@@ -116,53 +108,42 @@ export default function ProjectsSection() {
                 
                 {/* Action Buttons - Always at bottom */}
                 <div className="flex space-x-3 mt-6">
-                  <motion.a
+                  <a
                     href={project.liveDemo}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex-1 bg-blue-600 hover:bg-blue-700 text-white text-center py-3 px-4 rounded-lg font-medium text-sm transition-all duration-200 flex items-center justify-center space-x-2"
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
                   >
                     <i className="fas fa-eye text-xs"></i>
                     <span>Live Demo</span>
-                  </motion.a>
-                  <motion.a
+                  </a>
+                  <a
                     href={project.github}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="bg-gray-100 hover:bg-gray-200 text-gray-700 py-3 px-4 rounded-lg font-medium text-sm transition-all duration-200 flex items-center justify-center"
-                    whileHover={{ scale: 1.02 }}
-                    whileTap={{ scale: 0.98 }}
                   >
                     <i className="fab fa-github text-sm"></i>
-                  </motion.a>
+                  </a>
                 </div>
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
         
         {/* View All Projects CTA */}
-        <motion.div
-          className="text-center lg:mt-16 mt-8"
-          initial={{ opacity: 0, y: 20 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-          transition={{ duration: 0.6, delay: 0.8 }}
-        >
-          <motion.a
+        <div className="text-center lg:mt-16 mt-8">
+          <a
             href="https://github.com/vaibhavzalavadiya"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white md:px-8 px-4 md:py-4 py-3 rounded-lg font-semibold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 space-x-3"
-            whileHover={{ scale: 1.05, y: -2 }}
-            whileTap={{ scale: 0.95 }}
           >
             <i className="fab fa-github text-xl"></i>
             <span className="md:text-lg text-sm">View All Projects on GitHub</span>
             <i className="fas fa-arrow-right text-sm"></i>
-          </motion.a>
-        </motion.div>
+          </a>
+        </div>
       </div>
     </section>
   );

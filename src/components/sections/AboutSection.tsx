@@ -22,12 +22,7 @@ export default function AboutSection() {
         <div className="grid lg:grid-cols-2 xl:gap-16 lg:gap-12 gap-8 items-center lg:md-10 mb-6">
           
           {/* Content Side */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
-            transition={{ duration: 0.8 }}
-            className="lg:space-y-5 space-y-4"
-          >
+          <div className="lg:space-y-5 space-y-4">
             <p className="lg:text-lg text-sm text-gray-700 leading-relaxed">
               I'm a passionate web developer with expertise in modern frontend technologies. 
               My journey combines professional training with hands-on experience in building real-world applications.
@@ -53,15 +48,10 @@ export default function AboutSection() {
                 <span className="text-gray-700">{personalInfo.contact.location}</span>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Profile Image */}
-          <motion.div
-            className="relative"
-            initial={{ opacity: 0, x: 30 }}
-            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
+          <div className="relative">
             <div className="md:w-80 md:h-80 w-48 h-48 mx-auto relative">
               <div className="w-full h-full bg-gradient-to-br from-blue-500 to-purple-600 rounded-full p-2">
                 <div className="w-full h-full bg-gray-100 rounded-full flex items-center justify-center">
@@ -72,16 +62,11 @@ export default function AboutSection() {
                 Available for work
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
 
         {/* Stats & Strengths Combined */}
-        <motion.div
-          className="bg-white rounded-2xl lg:p-7 p-5 shadow-lg border border-gray-100"
-          initial={{ opacity: 0, y: 30 }}
-          animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-        >
+        <div className="bg-white rounded-2xl lg:p-7 p-5 shadow-lg border border-gray-100">
           {/* Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 lg:gap-8 gap-4 lg:mb-8 mb-5 text-center">
             <div>
@@ -106,13 +91,9 @@ export default function AboutSection() {
           
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
             {strengths.map((strength, index) => (
-              <motion.div
+              <div
                 key={strength.name}
                 className="text-center group"
-                initial={{ opacity: 0, y: 20 }}
-                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-                transition={{ duration: 0.6, delay: 0.6 + index * 0.1 }}
-                whileHover={{ y: -3 }}
               >
                 <div className="w-16 h-16 bg-blue-100 group-hover:bg-blue-600 rounded-xl flex items-center justify-center mx-auto mb-3 group-hover:scale-110 transition-all duration-300">
                   <i className={`${strength.icon} text-blue-600 group-hover:text-white text-xl transition-colors duration-300`}></i>
@@ -120,10 +101,10 @@ export default function AboutSection() {
                 <h4 className="font-semibold text-gray-800 group-hover:text-blue-600 transition-colors text-sm">
                   {strength.name}
                 </h4>
-              </motion.div>
+              </div>
             ))}
           </div>
-        </motion.div>
+        </div>
 
       </div>
     </section>

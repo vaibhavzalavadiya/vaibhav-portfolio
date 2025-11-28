@@ -46,11 +46,7 @@ export default function ContactSection() {
         />
         
         <div className="grid md:grid-cols-2 lg:gap-12 gap-5">
-          <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -50 }}
-            transition={{ duration: 0.8 }}
-          >
+          <div>
             <h3 className="text-2xl font-bold text-gray-900 lg:mb-6 mb-4">Get In Touch</h3>
             <p className="lg:text-lg text-gray-600 lg:mb-8 mb-5">
               I'm always excited to work on new projects and collaborate with amazing people. 
@@ -63,12 +59,9 @@ export default function ContactSection() {
                 { icon: "fas fa-phone", label: "Phone", value: personalInfo.contact.phone },
                 { icon: "fas fa-map-marker-alt", label: "Location", value: personalInfo.contact.location }
               ].map((contact, index) => (
-                <motion.div
+                <div
                   key={contact.label}
                   className="flex items-center space-x-4"
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -20 }}
-                  transition={{ duration: 0.5, delay: 0.3 + index * 0.1 }}
                 >
                   <div className="md:w-12 md:h-12 w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center">
                     <i className={`${contact.icon} text-white`}></i>
@@ -77,7 +70,7 @@ export default function ContactSection() {
                     <div className="font-semibold text-gray-900">{contact.label}</div>
                     <div className="text-gray-600 lg:text-base text-sm">{contact.value}</div>
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
             
@@ -85,29 +78,19 @@ export default function ContactSection() {
               <h4 className="text-lg font-semibold text-gray-900 mb-4">Follow Me</h4>
               <div className="flex space-x-4">
                 {socialLinks.map((social, index) => (
-                  <motion.a
+                  <a
                     key={social.icon}
                     href={social.href}
                     className={`w-10 h-10 ${social.color} rounded-lg flex items-center justify-center text-white transition-colors`}
-                    initial={{ opacity: 0, scale: 0.8 }}
-                    animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
-                    transition={{ duration: 0.3, delay: 0.6 + index * 0.1 }}
-                    whileHover={{ scale: 1.1 }}
-                    whileTap={{ scale: 0.95 }}
                   >
                     <i className={social.icon}></i>
-                  </motion.a>
+                  </a>
                 ))}
               </div>
             </div>
-          </motion.div>
+          </div>
           
-          <motion.div
-            className="bg-white rounded-lg lg:p-8 p-4 shadow-lg"
-            initial={{ opacity: 0, x: 50 }}
-            animate={isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: 50 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
+          <div className="bg-white rounded-lg lg:p-8 p-4 shadow-lg">
             <form onSubmit={handleSubmit} className="lg:space-y-6 space-y-4">
               <div>
                 <label htmlFor="name" className="block text-sm font-semibold text-gray-900 mb-2">
@@ -180,7 +163,7 @@ export default function ContactSection() {
                 Send Message
               </button>
             </form>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>
