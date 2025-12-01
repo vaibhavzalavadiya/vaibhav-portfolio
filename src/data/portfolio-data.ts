@@ -147,6 +147,17 @@ export const projects = [
   },
   {
     id: 4,
+    title: "Freshora Market – Vegetable Store",
+    description: "A fresh and modern vegetable store website built with HTML, CSS, JavaScript, jQuery, and Tailwind CSS. Features an intuitive shopping interface, product galleries, and responsive design for seamless browsing of fresh produce and organic vegetables.",
+    technologies: ["HTML", "CSS", "JavaScript", "Tailwind"],
+    icon: "fas fa-carrot",
+    color: "from-green-500 to-emerald-600",
+    liveDemo: "https://freshora-market.vercel.app/",
+    github: "#",
+    image: "https://images.unsplash.com/photo-1542838132-92c53300491e?w=500&h=300&fit=crop&crop=entropy&auto=format&q=80"
+  },
+  {
+    id: 5,
     title: "Edusity – College & University",
     description: "A sleek and responsive university website built using React. Edusity showcases courses, faculty, events, and admissions info—perfect for modern educational institutions looking to build a strong online presence.",
     technologies: ["React", "Education"],
@@ -157,7 +168,18 @@ export const projects = [
     image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=500&h=300&fit=crop&crop=entropy&auto=format&q=80"
   },
   {
-    id: 5,
+    id: 6,
+    title: "Yoga Fitness – Wellness Studio",
+    description: "A serene and modern yoga fitness website built with HTML, CSS, JavaScript, and Tailwind CSS. Features class schedules, instructor profiles, wellness programs, and a peaceful design that promotes mindfulness and healthy living for yoga enthusiasts.",
+    technologies: ["HTML", "CSS", "JavaScript", "Tailwind"],
+    icon: "fas fa-spa",
+    color: "from-purple-500 to-pink-500",
+    liveDemo: "https://yoga-fitness-site.vercel.app/",
+    github: "#",
+    image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=500&h=300&fit=crop&crop=entropy&auto=format&q=80"
+  },
+  {
+    id: 7,
     title: "CSS2RTL – RTL CSS Converter Tool",
     description: "A smart and developer-friendly RTL CSS converter built with React. CSS2RTL lets users quickly transform LTR styles into clean, direction-aware RTL code—ideal for multilingual web projects and internationalization workflows.",
     technologies: ["React", "Tool", "CSS", "RTL"],
@@ -168,7 +190,7 @@ export const projects = [
     image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500&h=300&fit=crop&crop=entropy&auto=format&q=80"
   },
   {
-    id: 6,
+    id: 8,
     title: "Boss Coolant – Brand Website",
     description: "A modern and responsive business website built with React to showcase Boss Coolant's products and industrial solutions. Designed for brand impact, the site features a sleek UI, smooth navigation, and mobile-friendly design to ensure a strong digital presence.",
     technologies: ["React", "Tailwind CSS", "Brand Website"],

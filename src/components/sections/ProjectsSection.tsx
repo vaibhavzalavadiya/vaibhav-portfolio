@@ -29,7 +29,7 @@ export default function ProjectsSection() {
         />
         
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-6 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4 lg:gap-6 gap-5">
           {projects.map((project, index) => (
             <div
               key={project.id}
