@@ -25,7 +25,7 @@ export default function HeroSection() {
       {/* Floating Tech Icons */}
       <motion.div
         className="absolute top-20 left-4 md:left-10 text-white/20"
-        animate={{ 
+        animate={{
           y: [0, -20, 0],
           rotate: [0, 10, 0]
         }}
@@ -33,10 +33,10 @@ export default function HeroSection() {
       >
         <i className="fab fa-react text-4xl md:text-6xl"></i>
       </motion.div>
-      
+
       <motion.div
         className="absolute top-40 right-4 md:right-20 text-white/15"
-        animate={{ 
+        animate={{
           y: [0, -15, 0],
           rotate: [0, -10, 0]
         }}
@@ -47,7 +47,7 @@ export default function HeroSection() {
 
       <motion.div
         className="absolute bottom-20 left-4 md:left-20 text-white/20"
-        animate={{ 
+        animate={{
           y: [0, -10, 0],
           x: [0, 5, 0]
         }}
@@ -58,7 +58,7 @@ export default function HeroSection() {
 
       <motion.div
         className="absolute bottom-40 right-10 md:right-10 text-white/15"
-        animate={{ 
+        animate={{
           y: [0, -20, 0],
           rotate: [0, 15, 0]
         }}
@@ -76,29 +76,29 @@ export default function HeroSection() {
                 <i className="fas fa-user text-2xl md:text-4xl text-gray-700"></i>
               </div>
             </div>
-            
+
             <div className="mb-6">
               <span className="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-cyan-300 text-sm md:text-base font-medium border border-white/20">
                 👋 Welcome To My Portfolio
               </span>
             </div>
-            
+
             <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-white mb-4 md:mb-6">
               Hi, I'm{" "}
               <span className="bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent">
                 Vaibhav
               </span>
             </h1>
-            
+
             <h2 className="text-xl md:text-3xl lg:text-4xl text-white/90 mb-4 md:mb-8 font-medium leading-tight">
               <span className="text-cyan-300">Front-End Developer</span> &{" "}
               <span className="text-purple-300">Problem Solver</span>
             </h2>
-            
+
             <p className="text-sm lg:text-base text-white max-w-4xl mx-auto mb-5 md:mb-8 leading-relaxed">
               {personalInfo.description}
             </p>
-            
+
             {/* Stats */}
             <div className="flex flex-wrap justify-center gap-4 md:gap-6 mb-5 md:mb-8">
               <div className="text-center">
@@ -114,7 +114,7 @@ export default function HeroSection() {
                 <div className="text-sm md:text-base text-white/90">Technologies</div>
               </div>
             </div>
-            
+
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <button
                 onClick={() => scrollToSection("#projects")}
@@ -123,14 +123,25 @@ export default function HeroSection() {
                 <i className="fas fa-rocket mr-2"></i>
                 View My Work
               </button>
-              
+
               <button
                 onClick={() => scrollToSection("#contact")}
-                className="bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white border-2 border-white/30 hover:border-white/50 md:px-8 md:py-4 py-3 px-4 rounded-lg font-semibold transition-all duration-300"
+                className="bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white border-2 border-white/30 hover:border-white/50 md:px-8 md:py-4 py-3 px-4 rounded-lg font-semibold transition-all duration-300 flex justify-center items-center"
               >
                 <i className="fas fa-envelope mr-2"></i>
                 Get In Touch
               </button>
+
+              <a
+                href="/resume/VAIBHAV_ZALAVADIYA.pdf.pdf"
+                download="Vaibhav_Zalavadiya_Resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white md:px-8 md:py-4 py-3 px-4 rounded-lg font-semibold transition-all duration-300 shadow-xl hover:shadow-2xl border border-white/20 flex items-center justify-center"
+              >
+                <i className="fas fa-download mr-2"></i>
+                Download Resume
+              </a>
             </div>
           </div>
         </div>

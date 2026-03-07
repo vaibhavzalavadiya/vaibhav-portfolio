@@ -10,7 +10,7 @@ export const personalInfo = {
     location: "Surat, Gujarat, India"
   },
   social: {
-    linkedin: "https://www.linkedin.com/in/vaibhav-zalavadiya-0000000000/",
+    linkedin: "https://www.linkedin.com/in/zalavadiya-vaibhav-018839233/",
     github: "https://github.com/vaibhavzalavadiya",
     twitter: "https://x.com/vaibhavzalavadiya",
     instagram: "https://www.instagram.com/vaibhavzalavadiya/"
@@ -29,7 +29,7 @@ export const skills = [
   {
     name: "CSS",
     level: 92,
-    icon: "fab fa-css3-alt", 
+    icon: "fab fa-css3-alt",
     color: "from-blue-500 to-indigo-600",
     category: "Expert",
     description: "Modern layouts and animations"
@@ -88,15 +88,15 @@ export const skills = [
     icon: "fab fa-python",
     color: "from-green-500 to-emerald-600",
     category: "Intermediate",
-    description: "Backend development with Django/Flask"
+    description: "Backend development and scripting"
   },
   {
-    name: "Django",
-    level: 75,
-    icon: "fas fa-server",
-    color: "from-green-600 to-teal-600",
+    name: "Next.js",
+    level: 80,
+    icon: "fab fa-react",
+    color: "from-gray-700 to-black",
     category: "Advanced",
-    description: "Web framework for rapid development"
+    description: "React framework for production"
   }
 ];
 
@@ -114,6 +114,28 @@ export const tools = [
 export const projects = [
   {
     id: 1,
+    title: "Invoiceza",
+    description: "A modern and efficient invoice management system build with Next.js. Features intuitive invoice creation, clean design, and easy tracking for small businesses and freelancers.",
+    technologies: ["Next.js", "Tailwind CSS"],
+    icon: "fas fa-file-invoice-dollar",
+    color: "from-blue-500 to-cyan-600",
+    liveDemo: "https://invoiceza.com/",
+    github: "#",
+    image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500&h=300&fit=crop&q=80"
+  },
+  {
+    id: 2,
+    title: "SpinPickOnline",
+    description: "An engaging online lucky draw and spinning wheel gamification platform. Built with modern web technologies, offering interactive animations and seamless user experience.",
+    technologies: ["Next.js", "Animation"],
+    icon: "fas fa-dharmachakra",
+    color: "from-purple-500 to-pink-600",
+    liveDemo: "https://spinpickonline.com/",
+    github: "#",
+    image: "/images/spin_pick_online.png"
+  },
+  {
+    id: 3,
     title: "Trading Backtest Platform",
     description: "A full-stack Trading Strategy Platform built with Django (backend) and React + Tailwind (frontend). It enables multi-market strategy backtesting, timeframe selection, dynamic charting, and trade insights with a sleek, responsive UI.",
     technologies: ["React", "Django", "AI"],
@@ -124,7 +146,7 @@ export const projects = [
     image: "/images/trading-backtest.png"
   },
   {
-    id: 2,
+    id: 4,
     title: "AI Background Remover",
     description: "A fast and user-friendly AI background remover web app built using Flask and React. Instantly upload an image, remove the background with one click, and download a clean cutout—ideal for product photos, designers, and online sellers.",
     technologies: ["Flask", "React", "AI"],
@@ -135,7 +157,7 @@ export const projects = [
     image: "https://images.unsplash.com/photo-1633409361618-c73427e4e206?w=500&h=300&fit=crop&crop=entropy&auto=format&q=80"
   },
   {
-    id: 3,
+    id: 5,
     title: "Jewelry Store – Online Shop",
     description: "A fully responsive online jewelry store built without frameworks using pure HTML, CSS, JavaScript, and jQuery. Features include interactive product galleries, smooth animations, and a clean, elegant user interface for browsing and shopping.",
     technologies: ["HTML", "CSS", "JavaScript"],
@@ -146,7 +168,7 @@ export const projects = [
     image: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=500&h=300&fit=crop&crop=entropy&auto=format&q=80"
   },
   {
-    id: 4,
+    id: 6,
     title: "Freshora Market – Vegetable Store",
     description: "A fresh and modern vegetable store website built with HTML, CSS, JavaScript, jQuery, and Tailwind CSS. Features an intuitive shopping interface, product galleries, and responsive design for seamless browsing of fresh produce and organic vegetables.",
     technologies: ["HTML", "CSS", "JavaScript", "Tailwind"],
@@ -157,7 +179,7 @@ export const projects = [
     image: "https://images.unsplash.com/photo-1542838132-92c53300491e?w=500&h=300&fit=crop&crop=entropy&auto=format&q=80"
   },
   {
-    id: 5,
+    id: 7,
     title: "Edusity – College & University",
     description: "A sleek and responsive university website built using React. Edusity showcases courses, faculty, events, and admissions info—perfect for modern educational institutions looking to build a strong online presence.",
     technologies: ["React", "Education"],
@@ -168,7 +190,7 @@ export const projects = [
     image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=500&h=300&fit=crop&crop=entropy&auto=format&q=80"
   },
   {
-    id: 6,
+    id: 8,
     title: "Yoga Fitness – Wellness Studio",
     description: "A serene and modern yoga fitness website built with HTML, CSS, JavaScript, and Tailwind CSS. Features class schedules, instructor profiles, wellness programs, and a peaceful design that promotes mindfulness and healthy living for yoga enthusiasts.",
     technologies: ["HTML", "CSS", "JavaScript", "Tailwind"],
@@ -179,7 +201,7 @@ export const projects = [
     image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=500&h=300&fit=crop&crop=entropy&auto=format&q=80"
   },
   {
-    id: 7,
+    id: 9,
     title: "CSS2RTL – RTL CSS Converter Tool",
     description: "A smart and developer-friendly RTL CSS converter built with React. CSS2RTL lets users quickly transform LTR styles into clean, direction-aware RTL code—ideal for multilingual web projects and internationalization workflows.",
     technologies: ["React", "Tool", "CSS", "RTL"],
@@ -190,7 +212,7 @@ export const projects = [
     image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500&h=300&fit=crop&crop=entropy&auto=format&q=80"
   },
   {
-    id: 8,
+    id: 10,
     title: "Boss Coolant – Brand Website",
     description: "A modern and responsive business website built with React to showcase Boss Coolant's products and industrial solutions. Designed for brand impact, the site features a sleek UI, smooth navigation, and mobile-friendly design to ensure a strong digital presence.",
     technologies: ["React", "Tailwind CSS", "Brand Website"],

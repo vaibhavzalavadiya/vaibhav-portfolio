@@ -11,7 +11,7 @@ export default function Navigation() {
     const handleScroll = () => {
       const sections = ["home", "about", "skills", "projects", "contact"];
       const scrollPosition = window.scrollY + 100;
-      
+
       setScrolled(window.scrollY > 50);
 
       for (const section of sections) {
@@ -66,13 +66,13 @@ export default function Navigation() {
   return (
     <>
       {/* Main Navigation */}
-      <nav 
+      <nav
         className={`sticky top-0 left-0 right-0 z-50 w-full transition-all duration-500 bg-white border-b border-gray-200 shadow-sm`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16 lg:h-20">
             {/* Logo */}
-            <motion.div 
+            <motion.div
               className="flex items-center space-x-3 cursor-pointer group"
               onClick={() => scrollToSection("#home")}
               initial={{ opacity: 0, x: -30 }}
@@ -100,9 +100,9 @@ export default function Navigation() {
                   onClick={() => scrollToSection(item.href)}
                   className={`relative px-4 py-2 text-sm font-medium transition-all duration-300 rounded-lg group ${
                     activeSection === item.href.substring(1)
-                      ? "text-blue-600 bg-blue-50/80 shadow-sm" 
+                      ? "text-blue-600 bg-blue-50/80 shadow-sm"
                       : "text-gray-700 hover:text-blue-600 hover:bg-blue-50/50"
-                  }`}
+                    }`}
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.5, delay: 0.2 + index * 0.1 }}
@@ -190,7 +190,7 @@ export default function Navigation() {
               exit={{ opacity: 0 }}
               onClick={() => setIsOpen(false)}
             />
-            
+
             {/* Mobile Sidebar */}
             <motion.div
               className="fixed top-0 right-0 h-full w-full max-w-sm bg-white shadow-2xl z-50 lg:hidden overflow-y-auto"
@@ -207,7 +207,7 @@ export default function Navigation() {
                 >
                   <i className="fas fa-times text-gray-600"></i>
                 </button>
-                
+
                 {/* Navigation Items */}
                 <div className="space-y-3 mb-4">
                   {navItems.map((item, index) => (
@@ -218,7 +218,7 @@ export default function Navigation() {
                         activeSection === item.href.substring(1)
                           ? "text-blue-600 bg-blue-50 font-semibold shadow-sm border border-blue-100"
                           : "text-gray-700 hover:text-blue-600 hover:bg-blue-50/50"
-                      }`}
+                        }`}
                       initial={{ opacity: 0, x: -30 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: index * 0.1 }}
@@ -229,7 +229,7 @@ export default function Navigation() {
                         activeSection === item.href.substring(1)
                           ? "bg-blue-100 text-blue-600"
                           : "bg-gray-100 text-gray-600 group-hover:bg-blue-100 group-hover:text-blue-600"
-                      }`}>
+                        }`}>
                         <i className={`${item.icon} text-sm`}></i>
                       </div>
                       <div className="flex-1">
@@ -246,7 +246,7 @@ export default function Navigation() {
                     </motion.button>
                   ))}
                 </div>
-                
+
                 {/* Social Links & CTA */}
                 <motion.div
                   className="pt-5 border-t border-gray-200"
