@@ -24,13 +24,15 @@ export default function AboutSection() {
           {/* Content Side */}
           <div className="lg:space-y-5 space-y-4">
             <p className="lg:text-lg text-sm text-gray-700 leading-relaxed">
-              I'm a passionate web developer with expertise in modern frontend technologies. 
-              My journey combines professional training with hands-on experience in building real-world applications.
+              I'm a creative and results-driven web developer with 2+ years of hands-on experience building
+              real-world digital products. I work across the full stack — from crafting pixel-perfect frontends
+              with React, Next.js, Tailwind CSS & Bootstrap, to delivering seamless and performant web experiences.
             </p>
             <p className="lg:text-lg text-sm text-gray-700 leading-relaxed">
-              I specialize in creating responsive, user-focused web applications using React, JavaScript, 
-              and modern CSS frameworks. My approach emphasizes clean code, optimal performance, and 
-              exceptional user experiences.
+              I've shipped 20+ production projects including AI-powered tools, SaaS platforms, brand websites,
+              and e-commerce stores. Whether it's a fast-loading landing page, a payment-integrated platform
+              like Zerquon, or an algo trading backtest system — I bring clean code, sharp UI, and a relentless
+              focus on user experience to every build.
             </p>
             
             {/* Contact Info */}

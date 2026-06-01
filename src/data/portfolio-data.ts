@@ -2,7 +2,7 @@ export const personalInfo = {
   name: "Vaibhav Zalavadiya",
   title: "Front-End Developer | Quick Learner | Problem Solver",
   description: "Creative and results-driven web developer with a strong command of front-end technologies including React, JavaScript, Bootstrap, and Tailwind CSS. I build responsive, high-performance user interfaces for modern web applications, focused on clean design and seamless user experiences. Passionate about turning ideas into polished digital products through real-world project experience.",
-  experience: "1.5+",
+  experience: "2+",
   projects: "20+",
   contact: {
     email: "vaibhavzalavadiya2@gmail.com",
@@ -114,6 +114,28 @@ export const tools = [
 export const projects = [
   {
     id: 1,
+    title: "Zerquon – AI Brand Visibility",
+    description: "A Next.js full-stack platform with payment gateway integration that helps businesses track how often their brand appears in AI-generated responses from ChatGPT, Gemini, Claude, and Meta AI. Provides AI visibility scores, competitor analysis, content gap identification, and actionable insights to boost discoverability in the era of AI-powered search.",
+    technologies: ["Next.js", "Full Stack", "AI", "Payments"],
+    icon: "fas fa-robot",
+    color: "from-violet-600 to-indigo-700",
+    liveDemo: "https://zerquon.com",
+    github: "#",
+    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=500&h=300&fit=crop&crop=entropy&auto=format&q=80"
+  },
+  {
+    id: 2,
+    title: "Jewelry Store – Online Shop",
+    description: "A fully responsive online jewelry store built without frameworks using pure HTML, CSS, JavaScript, and jQuery. Features include interactive product galleries, smooth animations, and a clean, elegant user interface for browsing and shopping.",
+    technologies: ["HTML", "CSS", "JavaScript"],
+    icon: "fas fa-gem",
+    color: "from-amber-500 to-orange-600",
+    liveDemo: "https://glowtheoryjewellery.com",
+    github: "#",
+    image: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=500&h=300&fit=crop&crop=entropy&auto=format&q=80"
+  },
+  {
+    id: 3,
     title: "Invoiceza",
     description: "A modern and efficient invoice management system build with Next.js. Features intuitive invoice creation, clean design, and easy tracking for small businesses and freelancers.",
     technologies: ["Next.js", "Tailwind CSS"],
@@ -124,7 +146,7 @@ export const projects = [
     image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500&h=300&fit=crop&q=80"
   },
   {
-    id: 2,
+    id: 4,
     title: "SpinPickOnline",
     description: "An engaging online lucky draw and spinning wheel gamification platform. Built with modern web technologies, offering interactive animations and seamless user experience.",
     technologies: ["Next.js", "Animation"],
@@ -135,40 +157,29 @@ export const projects = [
     image: "/images/spin_pick_online.png"
   },
   {
-    id: 3,
+    id: 5,
     title: "Trading Backtest Platform",
     description: "A full-stack Trading Strategy Platform built with Django (backend) and React + Tailwind (frontend). It enables multi-market strategy backtesting, timeframe selection, dynamic charting, and trade insights with a sleek, responsive UI.",
     technologies: ["React", "Django", "AI"],
     icon: "fas fa-chart-line",
     color: "from-blue-600 to-indigo-700",
-    liveDemo: "https://trading-strategy-backtest.vercel.app/",
+    liveDemo: "https://algo-trading-platform-two.vercel.app/",
     github: "#",
     image: "/images/trading-backtest.png"
   },
   {
-    id: 4,
-    title: "AI Background Remover",
-    description: "A fast and user-friendly AI background remover web app built using Flask and React. Instantly upload an image, remove the background with one click, and download a clean cutout—ideal for product photos, designers, and online sellers.",
-    technologies: ["Flask", "React", "AI"],
-    icon: "fas fa-scissors",
-    color: "from-emerald-500 to-teal-600",
-    liveDemo: "https://apexremovecom.vercel.app/",
-    github: "#",
-    image: "https://images.unsplash.com/photo-1633409361618-c73427e4e206?w=500&h=300&fit=crop&crop=entropy&auto=format&q=80"
-  },
-  {
-    id: 5,
-    title: "Jewelry Store – Online Shop",
-    description: "A fully responsive online jewelry store built without frameworks using pure HTML, CSS, JavaScript, and jQuery. Features include interactive product galleries, smooth animations, and a clean, elegant user interface for browsing and shopping.",
-    technologies: ["HTML", "CSS", "JavaScript"],
-    icon: "fas fa-gem",
-    color: "from-amber-500 to-orange-600",
-    liveDemo: "https://jewelry-storesite.netlify.app/",
-    github: "#",
-    image: "https://images.unsplash.com/photo-1515562141207-7a88fb7ce338?w=500&h=300&fit=crop&crop=entropy&auto=format&q=80"
-  },
-  {
     id: 6,
+    title: "Boss Chem Solution – Brand Website",
+    description: "A modern and responsive business website built with Next.js to showcase Boss Chem Solution's chemical products and industrial solutions. Designed for brand impact, the site features a sleek UI, smooth navigation, and mobile-friendly design to ensure a strong digital presence.",
+    technologies: ["Next.js", "Tailwind CSS", "Brand Website"],
+    icon: "fas fa-flask",
+    color: "from-yellow-500 to-red-600",
+    liveDemo: "https://bosschemsolution.com/",
+    github: "#",
+    image: "https://images.unsplash.com/photo-1588011930968-eadac80e6a5a?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+  },
+  {
+    id: 7,
     title: "Freshora Market – Vegetable Store",
     description: "A fresh and modern vegetable store website built with HTML, CSS, JavaScript, jQuery, and Tailwind CSS. Features an intuitive shopping interface, product galleries, and responsive design for seamless browsing of fresh produce and organic vegetables.",
     technologies: ["HTML", "CSS", "JavaScript", "Tailwind"],
@@ -179,18 +190,18 @@ export const projects = [
     image: "https://images.unsplash.com/photo-1542838132-92c53300491e?w=500&h=300&fit=crop&crop=entropy&auto=format&q=80"
   },
   {
-    id: 7,
-    title: "Edusity – College & University",
-    description: "A sleek and responsive university website built using React. Edusity showcases courses, faculty, events, and admissions info—perfect for modern educational institutions looking to build a strong online presence.",
-    technologies: ["React", "Education"],
-    icon: "fas fa-graduation-cap",
-    color: "from-violet-500 to-purple-600",
-    liveDemo: "https://edusity-react-web-gamma.vercel.app/",
+    id: 8,
+    title: "AI Background Remover",
+    description: "A fast and user-friendly AI background remover web app built using Flask and React. Instantly upload an image, remove the background with one click, and download a clean cutout—ideal for product photos, designers, and online sellers.",
+    technologies: ["Flask", "React", "AI"],
+    icon: "fas fa-scissors",
+    color: "from-emerald-500 to-teal-600",
+    liveDemo: "https://apexremovecom.vercel.app/",
     github: "#",
-    image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=500&h=300&fit=crop&crop=entropy&auto=format&q=80"
+    image: "https://images.unsplash.com/photo-1633409361618-c73427e4e206?w=500&h=300&fit=crop&crop=entropy&auto=format&q=80"
   },
   {
-    id: 8,
+    id: 9,
     title: "Yoga Fitness – Wellness Studio",
     description: "A serene and modern yoga fitness website built with HTML, CSS, JavaScript, and Tailwind CSS. Features class schedules, instructor profiles, wellness programs, and a peaceful design that promotes mindfulness and healthy living for yoga enthusiasts.",
     technologies: ["HTML", "CSS", "JavaScript", "Tailwind"],
@@ -201,7 +212,7 @@ export const projects = [
     image: "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=500&h=300&fit=crop&crop=entropy&auto=format&q=80"
   },
   {
-    id: 9,
+    id: 10,
     title: "CSS2RTL – RTL CSS Converter Tool",
     description: "A smart and developer-friendly RTL CSS converter built with React. CSS2RTL lets users quickly transform LTR styles into clean, direction-aware RTL code—ideal for multilingual web projects and internationalization workflows.",
     technologies: ["React", "Tool", "CSS", "RTL"],
@@ -210,17 +221,6 @@ export const projects = [
     liveDemo: "https://css2rtl-vaibhavs-projects-b8c97238.vercel.app/",
     github: "#",
     image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?w=500&h=300&fit=crop&crop=entropy&auto=format&q=80"
-  },
-  {
-    id: 10,
-    title: "Boss Coolant – Brand Website",
-    description: "A modern and responsive business website built with React to showcase Boss Coolant's products and industrial solutions. Designed for brand impact, the site features a sleek UI, smooth navigation, and mobile-friendly design to ensure a strong digital presence.",
-    technologies: ["React", "Tailwind CSS", "Brand Website"],
-    icon: "fas fa-industry",
-    color: "from-yellow-500 to-red-600",
-    liveDemo: "https://boss-coolant.vercel.app/",
-    github: "#",
-    image: "https://images.unsplash.com/photo-1588011930968-eadac80e6a5a?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
   }
 ];
 

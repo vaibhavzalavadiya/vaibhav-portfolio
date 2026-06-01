@@ -132,7 +132,7 @@ export default function ProjectsSection() {
         </div>
         
         {/* View All Projects CTA */}
-        <div className="text-center lg:mt-16 mt-8">
+        <div className="text-center lg:mt-16 mt-8 flex flex-wrap items-center justify-center gap-4">
           <a
             href="https://github.com/vaibhavzalavadiya"
             target="_blank"
@@ -141,6 +141,16 @@ export default function ProjectsSection() {
           >
             <i className="fab fa-github text-xl"></i>
             <span className="md:text-lg text-sm">View All Projects on GitHub</span>
+            <i className="fas fa-arrow-right text-sm"></i>
+          </a>
+          <a
+            href="https://www.linkedin.com/in/vaibhav-zalavadiya-018839233"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center bg-gradient-to-r from-blue-500 to-blue-700 hover:from-blue-600 hover:to-blue-800 text-white md:px-8 px-4 md:py-4 py-3 rounded-lg font-semibold text-lg shadow-xl hover:shadow-2xl transition-all duration-300 space-x-3"
+          >
+            <i className="fab fa-linkedin text-xl"></i>
+            <span className="md:text-lg text-sm">View Full Profile on LinkedIn</span>
             <i className="fas fa-arrow-right text-sm"></i>
           </a>
         </div>
